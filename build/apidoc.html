@@ -61,12 +61,84 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.gulp-less">module gulp-less</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-less.gulp-less">
+            function <span class="apidocSignatureSpan"></span>gulp-less
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.gulp-less" id="apidoc.module.gulp-less">module gulp-less</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-less.gulp-less" id="apidoc.element.gulp-less.gulp-less">
+        function <span class="apidocSignatureSpan"></span>gulp-less
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gulp-less = function (options) {
+  // Mixes in default options.
+  var opts = assign({}, {
+      compress: false,
+      paths: []
+    }, options);
+
+  return through2.obj(function(file, enc, cb) {
+    if (file.isNull()) {
+      return cb(null, file);
+    }
+
+    if (file.isStream()) {
+      return cb(new PluginError(&#x27;gulp-less&#x27;, &#x27;Streaming not supported&#x27;));
+    }
+
+    var str = file.contents.toString();
+
+    // Injects the path of the current file
+    opts.filename = file.path;
+
+    // Bootstrap source maps
+    if (file.sourceMap) {
+      opts.sourcemap = true;
+    }
+
+    less.render(str, opts).then(function(res) {
+      file.contents = new Buffer(res.result);
+      file.path = gutil.replaceExtension(file.path, &#x27;.css&#x27;);
+      if (res.sourcemap) {
+        res.sourcemap.file = file.relative;
+        res.sourcemap.sources = res.sourcemap.sources.map(function (source) {
+          return path.relative(file.base, source);
+        });
+
+        applySourceMap(file, res.sourcemap);
+      }
+      return file;
+    }).then(function(file) {
+      cb(null, file);
+    }).catch(function(err) {
+      // Convert the keys so PluginError can read them
+      err.lineNumber = err.line;
+      err.fileName = err.filename;
+
+      // Add a better error message
+      err.message = err.message + &#x27; in file &#x27; + err.fileName + &#x27; line no. &#x27; + err.lineNumber;
+      return cb(new PluginError(&#x27;gulp-less&#x27;, err));
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 

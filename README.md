@@ -1,9 +1,14 @@
-# api documentation for  [gulp-less (v3.3.0)](https://github.com/plus3network/gulp-less#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-less.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-less) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-less.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-less)
+# npmdoc-gulp-less
+
+#### api documentation for  [gulp-less (v3.3.0)](https://github.com/plus3network/gulp-less#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-less.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-less) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-less.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-less)
+
 #### Less for Gulp
 
-[![NPM](https://nodei.co/npm/gulp-less.png?downloads=true)](https://www.npmjs.com/package/gulp-less)
+[![NPM](https://nodei.co/npm/gulp-less.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gulp-less)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-less/build/screenCapture.buildNpmdoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-gulp-less%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-less/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-gulp-less/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-gulp-less/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-less/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-less/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-gulp-less/build/screenCapture.npmPackageListing.svg)
 
@@ -55,25 +60,20 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "ccowan",
-            "email": "chris@chriscowan.us"
+            "name": "ccowan"
         },
         {
-            "name": "contra",
-            "email": "contra@wearefractal.com"
+            "name": "contra"
         },
         {
-            "name": "fractal",
-            "email": "contact@wearefractal.com"
+            "name": "fractal"
         },
         {
-            "name": "stevelacy",
-            "email": "me@slacy.me"
+            "name": "stevelacy"
         }
     ],
     "name": "gulp-less",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/plus3network/gulp-less.git"
@@ -84,16 +84,6 @@
     "version": "3.3.0"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module gulp-less](#apidoc.module.gulp-less)
-
-
-
-# <a name="apidoc.module.gulp-less"></a>[module gulp-less](#apidoc.module.gulp-less)
 
 
 
